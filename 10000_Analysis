@@ -1,0 +1,12 @@
+import pandas as pd
+
+path = 'D:/data/10000/1.xlsx'
+
+data = pd.read_excel(path,header=4, usecols=[u'序号',u'主叫号码',u'被叫号码',
+                                             u'开始时间',u'结束时间',u'时长',
+                                             u'基站ID',u'基站名称'],
+                     dtype={u'主叫号码':str,u'被叫号码':str,u'基站小区号':str,u'基站ID':str})
+
+
+
+print(data)
